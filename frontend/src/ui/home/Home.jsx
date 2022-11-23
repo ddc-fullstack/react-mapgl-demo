@@ -1,7 +1,7 @@
 import React from 'react'
 import Map from 'react-map-gl'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Pin } from './Pin'
+import { Pin } from './Pin.jsx'
 
 export function Home () {
   const [points] = React.useState([
@@ -23,6 +23,7 @@ export function Home () {
                 longitude: -106.65,
                 zoom: 9
               }}
+              mapboxAccessToken={import.meta.env.VITE_MAPBOX_ACCESS_TOKEN}
               style={{ width: 600, height: 400 }}
               mapStyle="mapbox://styles/mapbox/dark-v9"
             >
